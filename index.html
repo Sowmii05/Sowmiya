@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Validation</title>
+</head>
+<body>
+
+	<h2>Simple Form Validation</h2>
+	<form id="myForm">
+		<!-- Email Input -->
+		<label>Email:</label>
+		<input type="email" id="email" required>
+		<span id="emailError" style="color: red;"></span>
+		<br><br>
+
+		<!-- Password Input -->
+		<label>Password: </label>
+		<input type="password" id="password" required>
+		<span id="passwordError" style="color: red;"></span>
+		<br><br>
+
+		<1-- Phone Number Input-->
+		<label>Phone No: </label>
+		<input type="text" id="phone" required>
+		<span id="phoneError" style="color: red;"></span>
+		<br><br>
+
+		<!-- Submit Button -->
+		<input type="submit" value="Submit">
+	</form>
+
+	<script>
+		document.getElementById("myForm").addEventListener("submit", function(event) {
+			let email document.getElementById("email").value;
+			let password document.getElementById("password").value;
+			let phone document.getElementById("phone").value;
+			let emailError document.getElementById("emailError");
+			let passwordError document.getElementById("passwordError");
+			let email document.getElementById("email").value;
+			let password document.getElementById("password").value;
+			let phone document.getElementById("phone").value;
+			let passwordError document.getElementById("passwordError");
+			let emailError document.getElementById("emailError"); 
+			let valid true;
+			let phoneError document.getElementById("phoneError");
+
+			// Email validation
+			if (!email.includes ("@") || !email.includes(".")) { 
+				emailError.textContent = "Invalid emaill"; 
+				valid false;
+
+			} else {
+				emailError.textContent
+			}
+	
+			// Password validation (at least 6 characters)
+			if (password.length < 6) { 
+			passwordError.textContent = "Password must be at least 6 characters!"; 
+			valid false;
+			} else {
+				emailError.textContent="";
+			}
+
+			// Phone number validation (exactly 10 digits) 
+			if (1/^\d(10)$/.test(phone)) {
+				phoneError.textContent = "Phone must be 10 digits!"; 
+				valid false;
+			} else {
+				phoneError.textContent "";
+			}
+
+			if (Ivalid) { 
+				event.preventDefault(); // Prevent submission if validation fails 
+			}
+		});
+
+	</script>
+
+</body>
+</html>
